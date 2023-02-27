@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ієрархія класів</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card>
+  <ion-card-header color="primary">
+    <ion-card-title>
+    Робота з двовимірними фігурами
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+      <ion-label position="floating" color="primary">Сторана фігури</ion-label>
+      <ion-input type="number" value="5" #Inputa></ion-input>
+      <ion-label position="floating" color="primary">Висота фігури</ion-label>
+      <ion-input type="number" value="5" #Inputh></ion-input>
+      <ion-button (click)="ras(Inputa.value,Inputh.value)">Розрахунок</ion-button>
+      <ion-card *ngIf="visible"> 
+        <ion-card-header color="primary">
+           <ion-card-title >
+            <ion-icon name="triangle-outline"></ion-icon>
+            Трикутники
+           </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+        <ion-item>
+          <ion-label>
+            <h2>Трикутник</h2>
+            <h3>Площа</h3>
+            {{tr.S}}
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h2 >Прямокутний Трикутник</h2>
+            <h3>Площа</h3>
+            {{r_tr.S}}
+            <h3>Гіпотенуза</h3>
+            {{r_tr.C}}
+          </ion-label>
+        </ion-item>
+      </ion-card-content>
+      </ion-card>
+       <ion-card *ngIf="visible">
+        <ion-card-header color="primary">
+           <ion-card-title>
+           <ion-icon name="albums-outline"></ion-icon>
+            Прямокутники
+           </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+        <ion-item>
+          <ion-label>
+            <h2>Паралелограм</h2>
+            <h3>Площа</h3>
+            {{par.S}}
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h2>Квадрат</h2>
+            <h3>Площа</h3>
+            {{sq.S}}
+            <h3>Періметр</h3>
+            {{sq.P}}
+          </ion-label>
+        </ion-item>
+      </ion-card-content>
+      </ion-card>
+   </ion-card-content>
+</ion-card>
+</ion-content>
