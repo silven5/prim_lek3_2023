@@ -9,7 +9,6 @@ import { Square } from './Class/square';
   templateUrl: './tab0.page.html',
   styleUrls: ['./tab0.page.scss'],
 })
-
 export class Tab0Page implements OnInit {
   tr: any;
   r_tr: any;
@@ -20,7 +19,7 @@ export class Tab0Page implements OnInit {
     try {
       let a = parseInt(aa);
       let h = parseInt(hh);
-      if (isNaN(a) || (isNaN(h))) {
+      if (isNaN(a) || isNaN(h)) {
         throw new Error('Parameter is not a number!');
       }
       if (a <= 0 || h <= 0) {
@@ -31,16 +30,12 @@ export class Tab0Page implements OnInit {
       this.r_tr = new Right_Triangle(a, h);
       this.par = new Paralelogram(a, h);
       this.sq = new Square(a);
-
-    }
-    catch (e) {
+      this.visible = true;
+    } catch (e) {
       console.error(e);
     }
-    this.visible = true;
   }
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
