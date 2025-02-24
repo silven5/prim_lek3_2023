@@ -9,7 +9,6 @@ export class Cat extends Pet implements IRun, ISpeak {
   run() {
     console.log('Я кішка та бігу  зі швидкістю 15 км/ч');
   }
-
   bringMouse() {
     console.log('Вмію ловити мишей');
   }

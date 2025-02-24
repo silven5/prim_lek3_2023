@@ -20,7 +20,6 @@ export class Dog implements IPet {
   // геттер для розрахунку віку
   get age() {
     const diff = new Date(new Date().getTime() - this.bday.getTime());
-
     return diff.getFullYear() - new Date(0).getFullYear();
   }
   bringToy(toy: string) {

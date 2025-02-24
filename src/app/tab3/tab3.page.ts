@@ -6,6 +6,7 @@ import { Cat } from './Class/Cat';
 import { Dog } from './Class/Dog';
 import { Show_alert } from './Class/Show_alert';
 import { Show_console } from './Class/Show_console';
+import { Hameleon } from './Class/Hameleon';
 
 @Component({
   selector: 'app-tab3',
@@ -18,13 +19,11 @@ export class Tab3Page {
     let show = new Show_console();
     let show_alert = new Show_alert();
     let dog = new Dog('Собака', 'Рада', 'Рижа', new Date(2019, 4, 12), show);
-
     dog.run();
     dog.speak();
     dog.bringToy('Кістка');
     dog.guard();
     let cat = new Cat('Кішка', 'Мурка', 'Рижа', new Date(2017, 2, 2), show);
-
     cat.run();
     cat.speak();
     cat.bringMouse();
@@ -35,11 +34,9 @@ export class Tab3Page {
       new Date(1996, 2, 2),
       show
     );
-
     parrot.fly();
     parrot.speak();
     let fish = new Fish('Рибка', 'Дорі', 'Золота', new Date(2020, 2, 2), show);
-
     fish.swim();
     // !Додано на лекцыъ
     let snake = new Snake(
@@ -51,5 +48,12 @@ export class Tab3Page {
     );
     snake.speak();
     snake.polz();
+    let ham = new Hameleon(
+      'Хамелеон',
+      'Дорі',
+      'Зелений',
+      new Date(2020, 2, 2),
+      show
+    );
   }
 }

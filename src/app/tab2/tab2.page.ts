@@ -18,7 +18,7 @@ export class Tab2Page {
     let parrot: Parrot = new Sparrow(); // Працює
     let sparrow: Sparrow = new Parrot(); // Працює
     let parrotTwo: Parrot = new Duck();
-    //var duck1: Duck = new Parrot(); // Помилка
+    // var duck1: Duck = new Parrot(); // Помилка
 
     let duck: Duck = new Duck();
     console.log(
@@ -45,7 +45,9 @@ export class Tab2Page {
         ' Add = ' +
         add(a0, h, n) +
         ' Dob = ' +
-        min(a0, h, n)
+        min(a0, h, n) +
+        ' Avg =' +
+        arg(a0, h, n)
     );
   }
   ras() {
@@ -62,10 +64,8 @@ export class Tab2Page {
     cat.bringMouse();
   }
   ras_array() {
-    console.log('Hello');
     let taxa = new Dog('Рада', 'Рижа', new Date(2019, 4, 12));
     let mops = new Dog('Семік', 'Бежевий', new Date(2017, 5, 12));
-
     const shetler = new DogShelter(taxa, mops);
     shetler.forEach((dog) => {
       dog.show();
@@ -101,6 +101,9 @@ let add: ISeries = (a0: number, h: number, n: number): number => {
 };
 let min: ISeries = (a0: number, h: number, n: number): number => {
   return Number(a0) * Number(h) * Number(n);
+};
+let arg: ISeries = (a0: number, h: number, n: number): number => {
+  return (Number(a0) + Number(h) + Number(n)) / 3;
 };
 //Гібридний інтерфейс
 function personBuilder(): IPersonInfo {

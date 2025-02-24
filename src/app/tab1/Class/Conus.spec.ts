@@ -1,9 +1,7 @@
 import { Conus } from './Conus';
 //обгортка
-
 describe('Тести для класу Conus', () => {
   let conus: Conus;
-
   //Перед виконанням усіх тестів створимо екземляр класу конус
   beforeEach(() => {
     conus = new Conus('Conus', 5, 10);
